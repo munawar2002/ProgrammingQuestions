@@ -41,10 +41,10 @@ public class MergeTwoSortedLinkLists {
                     head3 = createNode(head3, temp2.val);
                     temp2 = temp2.next;
                 }
-            } else if (temp1 == null && temp2 != null) {
+            } else if (temp1 == null) {
                 head3 = createNode(head3, temp2.val);
                 temp2 = temp2.next;
-            } else if (temp1 != null && temp2 == null) {
+            } else {
                 head3 = createNode(head3, temp1.val);
                 temp1 = temp1.next;
             }

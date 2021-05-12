@@ -12,21 +12,20 @@ public class ReverseWords {
             For example:
             parameter: "Hello world", result: "olleH dlrow"
            */
-        String temp[] = s.split("\\s+"); //split at spaces
+        String[] temp = s.split("\\s+"); //split at spaces
 
         for(int i = 0 ; i<temp.length ; i++)
         {
             temp[i] = new StringBuilder(temp[i]).reverse().toString();
         }
 
-        String fin = "";
+        StringBuilder fin = new StringBuilder();
 
-        for(int j = 0 ; j< temp.length ; j++)
-        {
-            fin += temp[j]+ " ";
+        for (String value : temp) {
+            fin.append(value).append(" ");
 
         }
-        return fin;
+        return fin.toString();
     }
 
 

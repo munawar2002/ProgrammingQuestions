@@ -34,7 +34,7 @@ public class ValidParentheses {
             }
         }
 
-        return stack.isEmpty() ? true : false;
+        return stack.isEmpty();
     }
 
     public static void main(String a[]) {

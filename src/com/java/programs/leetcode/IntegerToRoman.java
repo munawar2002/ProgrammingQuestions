@@ -52,6 +52,7 @@ public class IntegerToRoman {
 //            System.out.println("i="+i+" -> "+test.intToRoman(i));
 //        }
         System.out.println(test.intToRoman(1994));
+        System.out.println(test.intToRoman(1995));
 
     }
 }
