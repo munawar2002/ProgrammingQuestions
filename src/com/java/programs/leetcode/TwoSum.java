@@ -27,9 +27,39 @@ public class TwoSum {
         return allTwoSums;
     }
 
+    public List<int[]> twoSumWithPointers(int[] nums, int target) {
+
+        int left=0,right=nums.length-1;
+        List<int[]> allTwoSums = new ArrayList<>();
+
+        while (left < right){
+
+            int value = nums[left] + nums[right];
+
+            if(value == target){
+                allTwoSums.add(new int[]{left, right});
+                left++;
+                right--;
+            } else if(value < target){
+                left++;
+            }else {
+                right--;
+            }
+        }
+
+        return allTwoSums;
+    }
+
     public static void main(String a[]) {
         TwoSum test = new TwoSum();
-        int A[] = {0,1,2, 7, 9, 11, 15};
-        test.twoSum(A,9).forEach(B -> Arrays.stream(B).forEach(System.out::println));
+        int A[] = {0,1,2, 7,8, 9, 11, 15};
+        test.twoSum(A,9).forEach(array -> {
+            System.out.println(array[0] +","+array[1]);
+        });
+        System.out.println("-----------------------------");
+        test.twoSumWithPointers(A,9).forEach(array -> {
+            System.out.println(array[0] +","+array[1]);
+        });
+
     }
 }
